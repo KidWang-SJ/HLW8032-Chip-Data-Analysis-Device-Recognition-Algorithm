@@ -1,4 +1,4 @@
-# HLW8032 Power Monitoring & Analysis Tool / HLW8032 电力监测分析工具
+# HLW8032 Power Monitoring & Analysis Tool / HLW8032 电力监测分析与用电设备识别工具
 
 *[English](#english) | [中文](#中文)*
 
