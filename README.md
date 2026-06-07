@@ -1,4 +1,4 @@
-# HLW8032 Power Monitoring & Analysis Tool / HLW8032 电力监测分析与用电设备识别工具
+# HLW8032 Power Monitoring & Analysis Tool / HLW8032 电力监测分析工具
 
 *[English](#english) | [中文](#中文)*
 
@@ -91,12 +91,16 @@ Flash the pass-through firmware (`hlw8032_usb_bridge.ino`) onto the ESP32. It fo
 - **Data Log** — scrolling log of each sample
 - **Coefficient Calibration** — adjustable voltage coefficient (default 1.88) and current coefficient (default 1.0)
 
+![Serial Monitor](./串口检测.png)
+
 ### 3.2 Power Curve (Tab 2)
 
 - matplotlib-based power-vs-time line chart
 - Dark theme with gold trace and blue endpoint marker
 - Auto-refresh (checks every 2 seconds for new data)
 - Displays sample count and cumulative energy
+
+![Power Curve](./功率曲线.png)
 
 ### 3.3 File Parser (Tab 3)
 
@@ -114,6 +118,8 @@ Flash the pass-through firmware (`hlw8032_usb_bridge.ino`) onto the ESP32. It fo
 - Multi-candidate parallel scoring with confidence-ranked results
 - Displays identification rationale and full feature table
 - Adjustable analysis window (5/10/15/30/60 minutes)
+
+![Appliance Identification](./设备识别.png)
 
 ---
 
@@ -423,6 +429,10 @@ hlw8032-power-analyzer/
 ├── sample_data_adapter.txt      # Sample: 65W power adapter
 ├── sample_data_adapter.bin      # Sample: 65W adapter (binary)
 │
+├── 串口检测.png                  # Screenshot: Serial Monitor
+├── 功率曲线.png                  # Screenshot: Power Curve
+├── 设备识别.png                  # Screenshot: Appliance Identification
+│
 └── dist/
     └── HLW8032-Analyzer.exe     # Packaged Windows executable
 ```
@@ -560,12 +570,16 @@ ESP32 需烧录透传固件（位于本仓库的 `hlw8032_usb_bridge.ino`），
 - **数据日志** — 滚动显示每次采样数据
 - **系数校准** — 电压系数（默认 1.88）和电流系数（默认 1.0）可实时调整
 
+![串口监测](./串口检测.png)
+
 ### 3.2 功率曲线（标签页 2）
 
 - 基于 matplotlib 的功率-时间折线图
 - 深色主题，金黄色折线 + 蓝色末点标记
 - 自动刷新（每 2 秒检测新数据）
 - 显示样本数和累计用电量
+
+![功率曲线](./功率曲线.png)
 
 ### 3.3 文件解析（标签页 3）
 
@@ -583,6 +597,8 @@ ESP32 需烧录透传固件（位于本仓库的 `hlw8032_usb_bridge.ino`），
 - 多候选并行评分，输出按可信度排序的候选设备列表
 - 显示识别依据摘要和完整特征参数表
 - 支持手动选择分析窗口（5/10/15/30/60 分钟）
+
+![设备识别](./设备识别.png)
 
 ---
 
@@ -896,6 +912,10 @@ hlw8032-power-analyzer/
 ├── sample_data.bin              # 示例数据：电热水壶 1800W（二进制）
 ├── sample_data_adapter.txt      # 示例数据：65W 电源适配器
 ├── sample_data_adapter.bin      # 示例数据：65W 电源适配器（二进制）
+│
+├── 串口检测.png                  # 截图：串口监测界面
+├── 功率曲线.png                  # 截图：功率曲线界面
+├── 设备识别.png                  # 截图：设备识别界面
 │
 └── dist/
     └── HLW8032-Analyzer.exe     # 打包好的 Windows 可执行文件
